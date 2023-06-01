@@ -32,6 +32,11 @@ model = joblib.load('./RandomForestModel.pkl')
 # FastAPI instance
 app = FastAPI()
 
+# Index route
+@app.get("/")
+def index():
+    return {"message": "Use the /predict route to use the model"}
+
 # /predict route with response
 @app.post("/predict")
 def predict_mushroom(poisonous: PredictionRequest):
@@ -47,3 +52,5 @@ def predict_mushroom(poisonous: PredictionRequest):
 # For starting uvicorn server
 if __name__ == "__main__":
     uvicorn.run(app, host="0.0.0.0", port=8000)
+
+# For local testing: uvicorn api:app --reload
