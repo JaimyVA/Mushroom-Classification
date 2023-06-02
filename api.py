@@ -24,7 +24,6 @@ class PredictionRequest(BaseModel):
     ring_type: int
     spore_print_color: int
     habitat: int
-    season: int
 
 # Model location
 model = joblib.load('./RandomForestModel.pkl')
@@ -44,7 +43,7 @@ def predict_mushroom(poisonous: PredictionRequest):
                           poisonous.does_bruise_or_bleed, poisonous.gill_attachment, poisonous.gill_spacing,
                           poisonous.gill_color, poisonous.stem_height, poisonous.stem_width, poisonous.stem_root,
                           poisonous.stem_surface, poisonous.stem_color, poisonous.veil_color, poisonous.has_ring,
-                          poisonous.ring_type, poisonous.spore_print_color, poisonous.habitat, poisonous.season]])
+                          poisonous.ring_type, poisonous.spore_print_color, poisonous.habitat]])
     prediction = model.predict(features)
     label = "poisonous" if prediction[0] == 1 else "edible"
     return {"prediction": int(prediction[0]), "label": label}
