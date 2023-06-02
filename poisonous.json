@@ -1,0 +1,21 @@
+{
+    "cap_diameter": 7.49,
+    "cap_shape": 0,
+    "cap_surface": 2,
+    "cap_color": 0,
+    "does_bruise_or_bleed": 2,
+    "gill_attachment": 1,
+    "gill_spacing": 0,
+    "gill_color": 11,
+    "stem_height": 6.09,
+    "stem_width": 11.62,
+    "stem_root": 0,
+    "stem_surface": 3,
+    "stem_color": 0,
+    "veil_color": 3,
+    "has_ring": 1,
+    "ring_type": 0,
+    "spore_print_color": 2,
+    "habitat": 3,
+    "season": 2
+  }
